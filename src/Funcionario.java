@@ -1,4 +1,20 @@
+import jdk.jfr.Percentage;
+
 public class Funcionario {
+    private String nome;
+    private double salario;
+
+    public Funcionario(){
+        this.nome = "Funcionário não cadastrado";
+        this.salario = 0;
+    }
+
+    public Funcionario(String nome, double salario){
+        this.nome = nome;
+        this.salario = salario;
+    }
+    //Getters e Setters:
+
     public String getNome() {
         return nome;
     }
@@ -15,20 +31,17 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    private String nome;
-    private double salario;
+    //Métodos:
 
-    public Funcionario(){
-        this.nome = "Funcionário";
-        this.salario = 0;
-    }
-
-    public Funcionario(String nome, double salario){
-        this.nome = nome;
-        this.salario = salario;
-    }
     public double calcularBonus(){
-        double bonus = 10% salario;
-        return bonus;
+        return (salario * 10) / 100;
+    }
+
+    public double calcularBonus(double percentualExtra){
+        return 10% salario + percentualExtra% salario;
+    }
+
+    public String exibirDados(){
+        return "Nome do funcionário: " + getNome() + "\nSalário: " + getSalario() + "\nBônus: " + calcularBonus() + "\n";
     }
 }
