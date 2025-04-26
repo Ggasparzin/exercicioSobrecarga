@@ -1,8 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-    Funcionario carlo = new Funcionario("Carlos", 1987.32);
-    Gerente mateo = new Gerente("Matheus", 2972, 20);
+    Funcionario thiago = new Funcionario("Thiago", 1987.32);
+    Gerente fabricio = new Gerente("Fabrício", 2970, 20);
 
-        System.out.println(mateo.exibirDados());
+        System.out.println(thiago.exibirDados());
+
+        System.out.println(fabricio.exibirDados());
+
     }
 }
