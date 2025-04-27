@@ -1,5 +1,3 @@
-import jdk.jfr.Percentage;
-
 public class Funcionario {
     private String nome;
     private double salario;
@@ -42,6 +40,6 @@ public class Funcionario {
     }
 
     public String exibirDados(){
-        return "Nome do funcionário: " + getNome() + "\nSalário: " + getSalario() + "\nBônus: " + calcularBonus() + "\n";
+        return String.format("Nome do funcionário: %s\nSalário: %.2f\nBônus: %.2f\n", getNome(),  getSalario(), calcularBonus());
     }
 }
